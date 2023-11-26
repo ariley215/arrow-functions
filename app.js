@@ -162,7 +162,7 @@ let message = name => `Hello, ${name}!`
 console.log(message('Allie'));
 
 
-let Student = (name, age, hometown) => {
+let Student = function(name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -178,7 +178,9 @@ console.log(joe);
 
 
 
-Student.prototype.greeting = array => `Hi, my name is ${this.name}`;
+Student.prototype.greeting = function () {
+  return `Hi, my name is ${this.name}`;
+};
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
